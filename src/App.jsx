@@ -94,9 +94,9 @@ export default function App() {
           uv: meteoData.current.uv_index,
           windSpeed: data.wind.speed,
           sunRise: formatTime(data.sys.sunrise),
-          sunSet: formatTime(data.sys.sunset),
           visibility: data.visibility / 1000,
-          airQuality: airData.list[0].main.aqi
+          airQuality: airData.list[0].main.aqi,
+          sunSet: formatTime(data.sys.sunset)
         })
 
         setIsLoading(false) // stop loading -> success
